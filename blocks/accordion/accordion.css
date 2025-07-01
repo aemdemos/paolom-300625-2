@@ -1,3 +1,20 @@
+.accordion details .accordion-item-body {
+  padding: 0 16px;
+}
+
+.accordion.accordion12 .accordion-item-body {
+  padding: 0 14px 12px;
+  font-size: 15px;
+  color: #3d3c36;
+  background: transparent;
+  border: none;
+}
+
+.accordion details[open] .accordion-item-body {
+  border-top: 1px solid #dadada;
+  background-color: var(--background-color);
+}
+
 .accordion details {
   border: 1px solid #dadada;
 }
@@ -51,11 +68,86 @@
   transform: translateY(-50%) rotate(-45deg);
 }
 
-.accordion details .accordion-item-body {
-  padding: 0 16px;
+.accordion.accordion12 {
+  background: #f8f9f4;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
-.accordion details[open] .accordion-item-body {
-  border-top: 1px solid #dadada;
-  background-color: var(--background-color);
+.accordion.accordion12 .accordion-item {
+  background: #f8f9f4;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion.accordion12 .accordion-item:not(:last-child) {
+  border-bottom: 1px solid #e2e4db;
+}
+
+.accordion.accordion12 .accordion-item-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 40px;
+  padding: 3px 0 3px 14px;
+  cursor: pointer;
+  font-family: "Instrument Sans", "Instrument Sans Fallback", sans-serif;
+  font-size: 16px;
+  color: #3d3c36;
+  font-weight: 400;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  line-height: 1.35;
+  position: relative;
+}
+
+.accordion.accordion12 .accordion-item-label:focus,
+.accordion.accordion12 .accordion-item-label:hover {
+  background: transparent;
+}
+
+.accordion.accordion12 .accordion-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion.accordion12 .accordion-item-label::after {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-left: auto;
+  margin-right: 12px;
+  background: url('data:image/svg+xml;utf8,<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><polyline points="3,4 6,8 9,4" fill="none" stroke="%233d3c36" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center/12px 12px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.accordion.accordion12 .accordion-item[open] .accordion-item-label::after {
+  transform: rotate(180deg);
+}
+
+.accordion.accordion12 .accordion-item-label p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d3c36;
+  flex: 1 1 auto;
+  line-height: 1.35;
+  align-self: center;
+}
+
+.accordion.accordion12 .accordion-item[open] .accordion-item-body {
+  border: none;
+  background: transparent;
+}
+
+.accordion.accordion12 .accordion-item + .accordion-item {
+  margin-top: 0;
 }
