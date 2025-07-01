@@ -39,7 +39,6 @@
   margin: 0;
 }
 
-
 .tabs .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
@@ -55,4 +54,94 @@
 
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
+}
+
+/* Combined and deduplicated .tabs.tabs13 and related selectors, preserving cascade order */
+.tabs.tabs13,
+.tabs.tabs13 > div,
+.tabs.tabs13 > div > div,
+.tabs.tabs13 .tabs-list,
+.tabs.tabs13 .tabs-panel {
+  border: none;
+  border-bottom: none;
+  box-shadow: none;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the tab label and prevent side borders */
+.tabs.tabs13 .tabs-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 32px;
+  border: none;
+  border-bottom: none;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Hide all tabs except the active one */
+.tabs.tabs13 .tabs-list button {
+  display: none;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #C4C4C4;
+  cursor: default;
+  outline: none;
+  text-align: center;
+  vertical-align: bottom;
+  border-bottom: none;
+}
+
+/* Style only the active tab button as a minimal label with underline */
+.tabs.tabs13 .tabs-list button[aria-selected="true"] {
+  display: inline-block;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 0 2px;
+  position: relative;
+  cursor: default;
+  vertical-align: bottom;
+  box-shadow: none;
+}
+
+/* Remove any border from non-selected tabs */
+.tabs.tabs13 .tabs-list button:not([aria-selected="true"]) {
+  border: none;
+  border-bottom: none;
+}
+
+/* Ensure label text inherits correct font styles */
+.tabs.tabs13 .tabs-list button p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: inherit;
+  line-height: 1.2;
+}
+
+/* Remove any possible border or underline from panels or wrappers */
+.tabs.tabs13 .tabs-panel {
+  border: none;
+  border-bottom: none;
+  box-shadow: none;
+  background: #fff;
+  margin: 0;
+  padding: 0;
 }
