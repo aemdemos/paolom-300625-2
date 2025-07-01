@@ -1,3 +1,4 @@
+
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -144,4 +145,127 @@
   background: #fff;
   margin: 0;
   padding: 0;
+}
+
+/* --- GENERATED CSS (except .tabs.tabs20, which will be merged below) --- */
+.tabs.tabs20 > :not(.tabs-list, .tabs-panel) {
+  display: none;
+}
+
+.tabs.tabs20 .tabs-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  background: #000;
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 100%;
+  min-height: 36px;
+  gap: 0;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+}
+
+.tabs.tabs20 .tabs-list .tabs-tab {
+  flex: 1 1 0;
+  width: 0; /* ensures even distribution */
+  max-width: none;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 10px 0 8px; /* more vertical space for underline */
+  color: #727272;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.6;
+  cursor: pointer;
+  position: relative;
+  box-shadow: none;
+  border-radius: 0;
+  line-height: 1.3;
+  background-image: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  transition: color 0.2s, opacity 0.2s, font-weight 0.2s;
+}
+
+.tabs.tabs20 .tabs-list .tabs-tab,
+.tabs.tabs20 .tabs-list .tabs-tab p {
+  font-family: var(--body-font-family);
+}
+
+.tabs.tabs20 .tabs-list .tabs-tab[aria-selected="true"] {
+  color: #fff;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.tabs.tabs20 .tabs-list .tabs-tab[aria-selected="true"]::after {
+  display: block;
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 0;
+  height: 2px;
+  width: 76%;
+  background: #fff;
+  border-radius: 1px;
+}
+
+.tabs.tabs20 .tabs-list .tabs-tab:not([aria-selected="true"])::after {
+  display: none;
+}
+
+.tabs.tabs20 .tabs-list .tabs-tab p {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: inherit;
+  color: inherit;
+  line-height: 1.3;
+  pointer-events: none;
+}
+
+.tabs.tabs20 .tabs-list .tabs-tab,
+.tabs.tabs20 .tabs-list .tabs-tab p {
+  vertical-align: middle;
+}
+
+.tabs.tabs20 .tabs-panel {
+  display: none;
+  background: #000;
+  color: #fff;
+  border: none;
+  margin: 0;
+  box-shadow: none;
+  padding: 24px 0 0;
+}
+
+.tabs.tabs20 .tabs-panel[aria-hidden="false"] {
+  display: block;
+}
+
+/* --- MERGED .tabs.tabs20 SELECTOR --- */
+.tabs.tabs20 {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 100%;
+  min-height: 36px;
 }
