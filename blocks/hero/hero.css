@@ -1,3 +1,5 @@
+/* ---- HERO CONTAINER ---- */
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -46,6 +48,78 @@
   }
 }
 
+/* ---- HERO8 ---- */
+
+.hero.hero8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 2.5rem 0;
+  box-sizing: border-box;
+}
+
+.hero.hero8 > div:first-child {
+  width: 90vw;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero.hero8 > div:last-child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hero.hero8 h3 {
+  font-family: Orbitron, Syncopate, Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  background: #fff;
+  padding: 1.1rem 0 0.9rem;
+  border-radius: 0.7em;
+  max-width: 95vw;
+  box-sizing: border-box;
+}
+
+.hero.hero8 picture,
+.hero.hero8 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  background: #eee;
+  overflow: hidden;
+}
+
+@media (width <= 900px) {
+  .hero.hero8 {
+    padding: 1.2rem 0;
+  }
+
+  .hero.hero8 > div:last-child {
+    margin-bottom: 1.1rem;
+  }
+
+  .hero.hero8 h3 {
+    font-size: 2rem;
+    padding: 0.7rem 0 0.5rem;
+  }
+
+  .hero.hero8 > div:first-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ---- HERO4 ---- */
+
 .hero.hero4 {
   position: relative;
   display: flex;
@@ -61,7 +135,6 @@
   isolation: isolate;
 }
 
-/* --- IMAGE BACKGROUND --- */
 .hero.hero4 > div:first-child {
   flex: 1 1 0;
   min-width: 0;
@@ -73,6 +146,21 @@
   overflow: hidden;
   border-radius: 20px;
   z-index: 1;
+}
+
+.hero.hero4 > div:first-child > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero.hero4 picture,
+.hero.hero4 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .hero.hero4 > div:last-child {
@@ -91,19 +179,8 @@
   z-index: 3;
 }
 
-.hero.hero4 > div:first-child > div {
-  position: relative;
+.hero.hero4 > div:last-child > div {
   width: 100%;
-  height: 100%;
-}
-
-.hero.hero4 picture,
-.hero.hero4 img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  border-radius: 20px;
 }
 
 .hero.hero4 > div:first-child::after {
@@ -116,12 +193,6 @@
   z-index: 2;
 }
 
-/* --- TEXT CONTAINER: EVEN MORE PRECISE LOWERING, SLIGHTLY WIDER --- */
-.hero.hero4 > div:last-child > div {
-  width: 100%;
-}
-
-/* --- HEADLINE --- */
 .hero.hero4 h1 {
   font-family: Montserrat, Syncopate, Arial, sans-serif;
   font-size: clamp(1.88rem, 3vw, 3.3rem);
@@ -135,7 +206,6 @@
   text-shadow: 0 2px 12px rgb(0 0 0 / 24%);
 }
 
-/* --- PARAGRAPH --- */
 .hero.hero4 p {
   color: #e0e0e0;
   font-size: clamp(0.93rem, 0.85vw, 1rem);
@@ -146,7 +216,6 @@
   text-shadow: 0 1px 8px rgb(0 0 0 / 18%);
 }
 
-/* --- CTA BUTTON --- */
 .hero.hero4 .button-container {
   margin: 0.25em 0 0;
 }
@@ -171,7 +240,6 @@
   border-color: #fff;
 }
 
-/* Remove bullets and unwanted nav/menu overlap if present */
 .hero.hero4 ul,
 .hero.hero4 li,
 .hero.hero4 nav,
@@ -184,7 +252,6 @@
   display: none;
 }
 
-/* --- RESPONSIVE: STACK TEXT, REMOVE BORDER-RADIUS --- */
 @media (width <= 900px) {
   .hero.hero4 {
     flex-direction: column;
