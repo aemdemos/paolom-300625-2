@@ -11,6 +11,18 @@
   min-height: 300px;
 }
 
+.hero.hero19 {
+  background: #000;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero h1,
 .hero h2,
 .hero h3,
@@ -135,30 +147,6 @@
   isolation: isolate;
 }
 
-.hero.hero4 > div:first-child {
-  flex: 1 1 0;
-  min-width: 0;
-  min-height: 100%;
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  overflow: hidden;
-  border-radius: 20px;
-  z-index: 1;
-}
-
-.hero.hero4 > div:first-child::after {
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  background: linear-gradient(132deg, rgb(0 0 0 / 68%) 0%, rgb(0 0 0 / 33%) 55%, rgb(0 0 0 / 0%) 100%);
-  opacity: 1;
-  pointer-events: none;
-  z-index: 2;
-  content: "";
-}
-
 .hero.hero4 > div:last-child {
   position: absolute;
   inset: 56% auto auto 0;
@@ -179,10 +167,34 @@
   width: 100%;
 }
 
+.hero.hero4 > div:first-child {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 1;
+}
+
 .hero.hero4 > div:first-child > div {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.hero.hero4 > div:first-child::after {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(132deg, rgb(0 0 0 / 68%) 0%, rgb(0 0 0 / 33%) 55%, rgb(0 0 0 / 0%) 100%);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 2;
+  content: "";
 }
 
 .hero.hero4 picture,
@@ -343,7 +355,7 @@
 }
 
 .hero.hero17 h1 {
-  font-family: Montserrat, Quicksand, "Instrument Sans", Arial, sans-serif;
+  font-family: Montserrat, Quicksand, Instrument Sans, Arial, sans-serif;
   font-size: clamp(2.1rem, 6.6vw, 3.7rem);
   font-weight: 600;
   color: #fff;
@@ -443,8 +455,6 @@
   align-items: flex-start;
 }
 
-/* Target the *deep* inner content for left column:  
-   If the h2/p are in .hero.hero18 > div:first-child > div, this will pick it up. */
 .hero.hero18 > div:first-child > div {
   width: 100%;
   display: flex;
@@ -453,7 +463,6 @@
   justify-content: center;
 }
 
-/* Headline styling */
 .hero.hero18 > div:first-child h2 {
   font-family: Orbitron, Montserrat, Arial, sans-serif;
   font-weight: 400;
@@ -477,7 +486,6 @@
   width: 100%;
 }
 
-/* Subheading styling */
 .hero.hero18 > div:first-child p:not(:last-of-type) {
   color: #444;
   font-family: Inter, Arial, sans-serif;
@@ -490,7 +498,6 @@
   overflow-wrap: break-word;
 }
 
-/* Right column: button stack, right-aligned */
 .hero.hero18 > div:last-child {
   flex: 0 0 260px;
   max-width: 320px;
@@ -510,7 +517,6 @@
   justify-content: center;
 }
 
-/* Pill-shaped buttons */
 .hero.hero18 p:last-of-type a {
   display: block;
   width: 200px;
@@ -531,13 +537,11 @@
   outline: none;
 }
 
-/* First button: yellow accent border */
 .hero.hero18 p:last-of-type a:first-child {
   border-right: 1.5px solid #e7e800;
   border-bottom: 1.5px solid #e7e800;
 }
 
-/* Remove ONLY navigation lists within the hero (not all ul/ol) */
 .hero.hero18 nav,
 .hero.hero18 .sidebar,
 .hero.hero18 [class*="menu"],
@@ -545,7 +549,6 @@
   display: none;
 }
 
-/* Responsive: stack for mobile */
 @media (width <= 900px) {
   .hero.hero18 {
     flex-direction: column;
