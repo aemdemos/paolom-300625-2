@@ -1,4 +1,4 @@
-
+/* Base tab styling */
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -57,7 +57,7 @@
   display: none;
 }
 
-/* Combined and deduplicated .tabs.tabs13 and related selectors, preserving cascade order */
+/********* TABS 13 - DEDUPLICATED AND REORDERED FOR NO-DESCENDING-SPECIFICITY *********/
 .tabs.tabs13,
 .tabs.tabs13 > div,
 .tabs.tabs13 > div > div,
@@ -71,83 +71,108 @@
   padding: 0;
 }
 
-/* Center the tab label and prevent side borders */
+.tabs.tabs13 {
+  border: none;
+  border-bottom: none;
+  box-shadow: none;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
 .tabs.tabs13 .tabs-list {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 8px 0;
+  min-height: 40px;
+  gap: 56px;
   width: 100%;
-  min-height: 32px;
-  border: none;
-  border-bottom: none;
-  background: #fff;
-  margin: 0;
-  padding: 0;
-  box-shadow: none;
 }
 
-/* Hide all tabs except the active one */
-.tabs.tabs13 .tabs-list button {
-  display: none;
-  background: none;
+.tabs.tabs13 .tabs-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
   border: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 400;
-  color: #C4C4C4;
-  cursor: default;
   outline: none;
-  text-align: center;
-  vertical-align: bottom;
-  border-bottom: none;
-}
-
-/* Style only the active tab button as a minimal label with underline */
-.tabs.tabs13 .tabs-list button[aria-selected="true"] {
-  display: inline-block;
-  background: none;
-  border: none;
-  border-bottom: 2px solid #000;
-  color: #000;
-  font-size: 16px;
-  font-weight: 400;
   margin: 0;
-  padding: 0 0 2px;
+  padding: 0;
+  color: #bdbdbd;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
   position: relative;
-  cursor: default;
-  vertical-align: bottom;
   box-shadow: none;
+  border-radius: 0;
+  line-height: 1.25;
+  min-width: 0;
+  height: 24px;
+  transition: color 0.2s, font-weight 0.2s;
 }
 
-/* Remove any border from non-selected tabs */
-.tabs.tabs13 .tabs-list button:not([aria-selected="true"]) {
-  border: none;
-  border-bottom: none;
+.tabs.tabs13 .tabs-tab[aria-selected="true"],
+.tabs.tabs13 .tabs-tab[aria-selected="false"] {
+  display: flex;
 }
 
-/* Ensure label text inherits correct font styles */
-.tabs.tabs13 .tabs-list button p {
+.tabs.tabs13 .tabs-tab[aria-selected="true"] {
+  color: #222;
+  font-weight: 700;
+}
+
+.tabs.tabs13 .tabs-tab[aria-selected="true"]::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background: #222;
+  border-radius: 1px;
+}
+
+.tabs.tabs13 .tabs-tab[aria-selected="false"]::after {
+  display: none;
+}
+
+.tabs.tabs13 .tabs-tab p {
   margin: 0;
-  font-size: 16px;
-  font-weight: 400;
+  padding: 0;
+  font-size: 14px;
+  font-weight: inherit;
   color: inherit;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
-/* Remove any possible border or underline from panels or wrappers */
 .tabs.tabs13 .tabs-panel {
+  background: #fff;
   border: none;
   border-bottom: none;
   box-shadow: none;
-  background: #fff;
   margin: 0;
   padding: 0;
 }
 
-/* --- GENERATED CSS (except .tabs.tabs20, which will be merged below) --- */
+/********* TABS 20 - DEDUPLICATED AND REORDERED FOR NO-DESCENDING-SPECIFICITY *********/
+.tabs.tabs20 {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 100%;
+  min-height: 36px;
+}
+
 .tabs.tabs20 > :not(.tabs-list, .tabs-panel) {
   display: none;
 }
@@ -169,9 +194,15 @@
   z-index: 1;
 }
 
+.tabs.tabs20 .tabs-list .tabs-tab,
+.tabs.tabs20 .tabs-list .tabs-tab p {
+  font-family: var(--body-font-family);
+  vertical-align: middle;
+}
+
 .tabs.tabs20 .tabs-list .tabs-tab {
   flex: 1 1 0;
-  width: 0; /* ensures even distribution */
+  width: 0;
   max-width: none;
   min-width: 0;
   display: flex;
@@ -181,7 +212,7 @@
   border: none;
   outline: none;
   margin: 0;
-  padding: 10px 0 8px; /* more vertical space for underline */
+  padding: 10px 0 8px;
   color: #727272;
   font-size: 14px;
   font-weight: 400;
@@ -196,11 +227,6 @@
   background-color: transparent;
   box-sizing: border-box;
   transition: color 0.2s, opacity 0.2s, font-weight 0.2s;
-}
-
-.tabs.tabs20 .tabs-list .tabs-tab,
-.tabs.tabs20 .tabs-list .tabs-tab p {
-  font-family: var(--body-font-family);
 }
 
 .tabs.tabs20 .tabs-list .tabs-tab[aria-selected="true"] {
@@ -239,11 +265,6 @@
   pointer-events: none;
 }
 
-.tabs.tabs20 .tabs-list .tabs-tab,
-.tabs.tabs20 .tabs-list .tabs-tab p {
-  vertical-align: middle;
-}
-
 .tabs.tabs20 .tabs-panel {
   display: none;
   background: #000;
@@ -256,16 +277,4 @@
 
 .tabs.tabs20 .tabs-panel[aria-hidden="false"] {
   display: block;
-}
-
-/* --- MERGED .tabs.tabs20 SELECTOR --- */
-.tabs.tabs20 {
-  background: #000;
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-shadow: none;
-  width: 100%;
-  max-width: 100%;
-  min-height: 36px;
 }
