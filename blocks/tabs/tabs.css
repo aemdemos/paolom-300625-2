@@ -166,11 +166,12 @@
   background: #000;
   margin: 0;
   padding: 0;
-  border: none;
-  box-shadow: none;
-  width: 100%;
-  max-width: 100%;
-  min-height: 36px;
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tabs.tabs20 > :not(.tabs-list, .tabs-panel) {
@@ -187,9 +188,9 @@
   margin: 0;
   border: none;
   width: 100%;
-  min-height: 36px;
+  min-height: 32px;
   gap: 0;
-  box-shadow: none;
+  box-sizing: border-box;
   position: relative;
   z-index: 1;
 }
@@ -202,9 +203,8 @@
 
 .tabs.tabs20 .tabs-list .tabs-tab {
   flex: 1 1 0;
-  width: 0;
-  max-width: none;
   min-width: 0;
+  max-width: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,39 +212,35 @@
   border: none;
   outline: none;
   margin: 0;
-  padding: 10px 0 8px;
-  color: #727272;
+  padding: 8px 0 4px;
+  color: #888;
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.2;
   text-align: center;
-  opacity: 0.6;
   cursor: pointer;
   position: relative;
-  box-shadow: none;
-  border-radius: 0;
-  line-height: 1.3;
-  background-image: none;
-  background-color: transparent;
   box-sizing: border-box;
-  transition: color 0.2s, opacity 0.2s, font-weight 0.2s;
+  border-bottom: none;
+  transition: color 0.2s, font-weight 0.2s;
 }
 
 .tabs.tabs20 .tabs-list .tabs-tab[aria-selected="true"] {
   color: #fff;
-  font-weight: 700;
-  opacity: 1;
+  font-weight: 500;
 }
 
 .tabs.tabs20 .tabs-list .tabs-tab[aria-selected="true"]::after {
   display: block;
   position: absolute;
-  left: 12%;
-  right: 12%;
+  left: 0;
+  right: 0;
   bottom: 0;
   height: 2px;
-  width: 76%;
+  width: 100%;
   background: #fff;
-  border-radius: 1px;
+  border-radius: 0;
+  margin: 0;
 }
 
 .tabs.tabs20 .tabs-list .tabs-tab:not([aria-selected="true"])::after {
@@ -258,21 +254,22 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 14px;
+  font-size: inherit;
   font-weight: inherit;
   color: inherit;
-  line-height: 1.3;
+  line-height: inherit;
   pointer-events: none;
 }
 
 .tabs.tabs20 .tabs-panel {
-  display: none;
   background: #000;
   color: #fff;
   border: none;
   margin: 0;
   box-shadow: none;
   padding: 24px 0 0;
+  width: 100%;
+  display: none;
 }
 
 .tabs.tabs20 .tabs-panel[aria-hidden="false"] {
