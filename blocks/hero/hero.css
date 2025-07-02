@@ -1,3 +1,4 @@
+
 /* ---- HERO CONTAINER ---- */
 
 .hero-container .hero-wrapper {
@@ -644,4 +645,17 @@
   .hero.hero18 > div:first-child p:not(:last-of-type) {
     max-width: 95vw;
   }
+}
+
+/* ---- MERGED .hero.hero17 ---- */
+.hero.hero17 {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  border-radius: 0;
 }
