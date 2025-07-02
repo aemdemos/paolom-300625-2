@@ -61,54 +61,108 @@
 }
 
 /* ---- HERO8 ---- */
-
 .hero.hero8 {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #fff;
-  padding: 2.5rem 0;
+  max-width: 640px;
+  margin: 72px auto 0;
+  padding: 60px 0 56px;
+  border-radius: 28px;
+  box-sizing: border-box;
+  box-shadow: 0 6px 32px rgb(0 0 0 / 8%);
+}
+
+.hero.hero8 > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.hero.hero8 > div:first-child {
-  width: 90vw;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
+/* Headline block */
 .hero.hero8 > div:last-child {
+  order: 1;
+  margin-bottom: 52px;
+  margin-top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
 .hero.hero8 h3 {
-  font-family: Orbitron, Syncopate, Arial, sans-serif;
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: #000;
+  font-family: Orbitron, Arial, sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #232323;
+  letter-spacing: 0.1em;
   text-align: center;
   margin: 0;
-  line-height: 1.1;
-  letter-spacing: 0.06em;
-  background: #fff;
-  padding: 1.1rem 0 0.9rem;
-  border-radius: 0.7em;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  line-height: 1.15;
   max-width: 95vw;
-  box-sizing: border-box;
+}
+
+/* Image block */
+.hero.hero8 > div:first-child {
+  order: 2;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero.hero8 picture,
 .hero.hero8 img {
   display: block;
   width: 100%;
+  max-width: 600px;
   height: auto;
+  aspect-ratio: 3 / 2;
+  border-radius: 22px;
   object-fit: cover;
-  border-radius: 20px;
-  background: #eee;
-  overflow: hidden;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 2px 14px rgb(0 0 0 / 6%);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (width <= 700px) {
+  .hero.hero8 {
+    max-width: 98vw;
+    padding: 24px 0;
+    border-radius: 14px;
+    margin: 28px auto 0;
+  }
+
+  .hero.hero8 > div:first-child,
+  .hero.hero8 picture,
+  .hero.hero8 img {
+    max-width: 98vw;
+    border-radius: 10px;
+  }
+
+  .hero.hero8 h3 {
+    font-size: 1.35rem;
+    max-width: 97vw;
+    line-height: 1.13;
+  }
+
+  .hero.hero8 > div:last-child {
+    margin-bottom: 20px;
+  }
+
+  .hero.hero8 > div:first-child {
+    margin-bottom: 18px;
+  }
 }
 
 @media (width <= 900px) {
@@ -131,7 +185,6 @@
 }
 
 /* ---- HERO4 ---- */
-
 .hero.hero4 {
   display: flex;
   flex-direction: row;
@@ -349,7 +402,6 @@
 }
 
 /* ---- GENERATED HERO17 ---- */
-
 .hero.hero17 > div:first-child picture,
 .hero.hero17 > div:first-child img {
   width: 100%;
@@ -456,7 +508,6 @@
 }
 
 /* ---- GENERATED HERO18 ---- */
-
 .hero.hero18 {
   display: flex;
   flex-direction: row;
